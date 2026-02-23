@@ -1,0 +1,6 @@
+chromadb==1.5.0
+descope==1.10.1
+openai==2.21.0
+openpyxl==3.1.5
+PyPDF2==3.0.1
+python-dotenv==1.2.1
