@@ -51,7 +51,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 ### Step 3: Clone the Repository
 ```bash
 git clone https://github.com/manishh/ReBAC-for-RAG-pipeline-with-Descope
-cd <repo-name>
+cd ReBAC-for-RAG-pipeline-with-Descope
 ```  
 
 ### Step 4: Install Dependencies
