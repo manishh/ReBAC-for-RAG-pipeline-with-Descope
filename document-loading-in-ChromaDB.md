@@ -6,9 +6,6 @@ If you'd like to understand how this demo code stores documents in the vector da
 
 ChromaDB stores vector embeddings, not full documents. That means you first need to extract text from formats like PDF, Excel, plain text, and Markdown, then load it into the vector database.
 
-Note: If you’re familiar with setting up the RAG pipeline, you can skip these two sections and directly jump to the “The Unsecured RAG Query Function” section below.
-
-
 Large documents also need to be split into smaller chunks. Embedding models have token limits, and smaller chunks improve retrieval accuracy by returning more precise context. For example, embedding a 50-page report as a single vector would match poorly against specific queries. This demo uses a simple character-based chunking strategy:
 
 ```python
@@ -76,3 +73,5 @@ def load_documents_to_chroma() -> None:
 The `DOCUMENT_METADATA` dictionary maps filenames to metadata like `doc_id` and title (you can add more metadata as well). This metadata is stored with each chunk, so you can trace it back to the original document later. This traceability is essential for authorization checks.
 
 ---
+
+Author: Manish Hatwalne
