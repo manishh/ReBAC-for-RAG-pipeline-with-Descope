@@ -7,7 +7,10 @@ This demo shows how to add Relationship-Based Access Control (ReBAC) to a Retrie
 The demo consists of two main components:
 
 1. **Descope Setup** (`setup_descope.py`) - Configures ReBAC schema and relationships
-2. **RAG Pipeline** (`rag_pipeline.py`) - Demonstrates both unsecured and secured approaches
+2. **RAG Pipeline** (`rag_pipeline.py`) - Demonstrates both unsecured and secured approaches.
+
+    > How documents are loaded in ChromaDB (RAG pipeline)?
+    > Read [here](./document-loading-in-ChromaDB.md).
 
 ## 🎯 What You'll Learn
 
@@ -303,7 +306,7 @@ python setup_descope.py
 
 ## 📄 License
 
-This demo is provided as-is for educational purposes for teh accompanying tutorial: [Add ReBAC to Your RAG Pipeline With Descope]().
+This demo is provided as-is for educational purposes for the accompanying tutorial: [Add ReBAC to Your RAG Pipeline With Descope]().
 
 ---
 
