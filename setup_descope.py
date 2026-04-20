@@ -78,7 +78,6 @@ type user
 
 type Team
   relation member: user
-  relation can_access: doc
 
 type doc
   relation owner: user
