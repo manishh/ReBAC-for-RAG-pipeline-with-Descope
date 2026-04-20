@@ -78,7 +78,6 @@ type user
 
 type Team
   relation member: user
-  relation can_access: doc
 
 type doc
   relation owner: user
@@ -192,14 +191,14 @@ def test_permissions():
     print("="*60)
     
     test_cases = [
-        ("alice@company.com", "team_notes_001", True),
-        ("alice@company.com", "board_minutes_001", False),
-        ("sarah@company.com", "board_minutes_001", True),
-        ("sarah@company.com", "salary_data_2026", True),
-        ("john@company.com", "salary_data_2026", False),
-        ("john@company.com", "hr_handbook_2026", True),
-        ("jane@company.com", "quarterly_report_q4_2025", True),
-        ("mike@company.com", "salary_data_2026", True),
+        ("alice@company.com", "team_notes_001", True),          # Alice owns this doc
+        ("alice@company.com", "board_minutes_001", False),      # Alice not an executive
+        ("sarah@company.com", "board_minutes_001", True),       # Sarah in executive team
+        ("sarah@company.com", "salary_data_2026", True),        # Executive team can access
+        ("john@company.com", "salary_data_2026", False),        # Regular employee denied
+        ("john@company.com", "hr_handbook_2026", True),         # All employees can access
+        ("jane@company.com", "quarterly_report_q4_2025", True), # Finance team can access
+        ("mike@company.com", "salary_data_2026", True),         # HR team can access
     ]
     
     for user, document, expected in test_cases:
