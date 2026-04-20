@@ -154,7 +154,7 @@ def query_rag(question: str, user_email: str) -> str:
     # Retrieve relevant chunks (NO FILTERING - this is the unsecured baseline)
     results = collection.query(
         query_texts=[question],
-        n_results=5
+        n_results=3
     )
     
     # Extract retrieved documents
